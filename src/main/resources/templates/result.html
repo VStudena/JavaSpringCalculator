@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<h1>Result</h1>
+Number 1: <span th:text="${calculatorDTO.number1}"></span><br/>
+Number 2: <span th:text="${calculatorDTO.number2}"></span><br/>
+
+<p>
+    Výsledek: <span th:text="${calculationResult}"><!-- Zde se bude vypisovat výsledek --></span>
+</p>
+<a href="calculator">Zpět</a>
+</body>
+</html>

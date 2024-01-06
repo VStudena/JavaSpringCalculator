@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulacka</title>
+</head>
+<body>
+<h1>Spring Kalkulacka</h1>
+<form action="/calculator" method="post">
+    <label>
+        Prvni cislo:
+        <input type="number" id="number1" name="number1" th:field="${calculatorDTO.number1}"/>
+    </label><br/>
+
+    <label>Operace:
+        <select id="operation" name="operation" th:field="${calculatorDTO.operation}">
+            <option value="+">Scitani</option>
+            <option value="-">Odcitani</option>
+            <option value="*">Nasobeni</option>
+            <option value="/">Deleni</option>
+        </select>
+    </label><br/>
+
+    <label>
+        Druhe cislo:
+        <input type="number" id="number2" name="number2" th:field="${calculatorDTO.number2}"/>
+    </label><br/>
+
+    <input type="submit" value="Odeslat"/> <input type="reset" value="Reset"/>
+</form>
+
+
+</body>
+</html>
